@@ -1,0 +1,40 @@
+body {
+  font-family: 'Slabo 27px', serif;
+  margin: 5px;
+}
+canvas {
+  margin-top: 5px;
+}
+p.header {
+  font-size: 1.5em;
+  text-align: center;
+}
+img.udacity {
+  width: 2em;
+  margin-bottom: -15px;
+  margin-left: -8px;
+}
+.container {
+  display: flex;
+}
+.half {
+  width: 50%;
+  display: wrap;
+}
+#pic {
+  max-width: 300px;
+  max-height: 300px;
+  width: 40vw;
+  height: 40vw;
+}
+.box {
+  display: inline-block;
+  border: solid 1px black;  
+  margin: 10px;
+  height: 30px;
+  padding: 5px;
+  background-color: #DDD;
+}
+#image {
+  width: 100%;
+}
