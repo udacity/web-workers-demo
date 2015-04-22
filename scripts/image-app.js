@@ -1,4 +1,6 @@
+/* global manipulate */
 (function(){
+  'use strict';
   // http://stackoverflow.com/questions/10906734/how-to-upload-image-into-html5-canvas
   var original;
   var imageLoader = document.querySelector('#imageLoader');
@@ -15,9 +17,9 @@
         canvas.height = img.height;
         ctx.drawImage(img,0,0);
         original = ctx.getImageData(0, 0, canvas.width, canvas.height);
-      }
+      };
       img.src = event.target.result;
-    }
+    };
     reader.readAsDataURL(e.target.files[0]);
   }
 
@@ -27,11 +29,11 @@
     var buttons = document.querySelectorAll('button');
     for (var i = 0; i < buttons.length; i++) {
       if (buttons[i].hasAttribute('disabled')) {
-        buttons[i].removeAttribute('disabled')
+        buttons[i].removeAttribute('disabled');
       } else {
         buttons[i].setAttribute('disabled', null);
       }
-    };
+    }
   }
 
   function manipulateImage(type) {
@@ -57,7 +59,7 @@
     }
     toggleButtonsAbledness();
     return ctx.putImageData(imageData, 0, 0);
-  };
+  }
 
   function revertImage() {
     return ctx.putImageData(original, 0, 0);

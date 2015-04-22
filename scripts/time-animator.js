@@ -1,4 +1,5 @@
 (function(){
+  'use strict';
   var canvas, context;
 
   init();
@@ -35,7 +36,7 @@
       "Thursday",
       "Friday",
       "Saturday"
-    ]
+    ];
 
     var months = [
       "January",
@@ -50,7 +51,7 @@
       "October",
       "November",
       "December"
-    ]
+    ];
 
     var now = new Date(Date.now());
 
@@ -64,9 +65,9 @@
     var ms = now.getMilliseconds();
 
     // add some zeros to keep time strings the same length
-    if (hours < 10) hours = "0" + hours;
-    if (mins < 10) mins = "0" + mins;
-    if (secs < 10) secs = "0" + secs;
+    if (hours < 10) { hours = "0" + hours; }
+    if (mins < 10) { mins = "0" + mins; }
+    if (secs < 10) { secs = "0" + secs; }
     if (ms < 10) {
       ms = "00" + ms;
     } else if (ms < 100 && ms >= 10) {
@@ -77,6 +78,7 @@
     var timeString = hours + ":" + mins + ":" + secs + ":" + ms;
     
     // calc the time diff between frames, starting with the second frame
+    var frameTimeDiff;
     if (lastTime > 0) {
       frameTimeDiff = now - lastTime;
     } else {
@@ -112,5 +114,5 @@
     // save the data about this frame for future comparison
     lastTime = now;
     lastDiff = frameTimeDiff;
-  };
+  }
 })();
