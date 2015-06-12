@@ -23,7 +23,7 @@ this.onmessage = function(e) {
       this.name = "ManipulationException";
       this.message = message;
     };
-    throw new InverterException('Image manipulation error');
+    throw new ManipulatorException('Image manipulation error');
     postMessage(undefined);
   }
 }
