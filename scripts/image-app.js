@@ -52,7 +52,7 @@
 
     }, false);
 
-   worker.postMessage({"data": imageData, "type":type}); // Start the worker.
+   worker.postMessage({"imageData": imageData, "type":type}); // Start the worker.
 
 
     // Hint! This is where you should post messages to the web worker and
