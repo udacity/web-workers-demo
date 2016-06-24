@@ -3,9 +3,10 @@ importScripts('imageManips.js');
 this.onmessage = function(e) {
   var imageData = e.data.imageData;
   var type = e.data.type;
-  var manipulatePixel = getManipFunc(type);
+
   try {
     length = imageData.data.length / 4;
+    var manipulatePixel = getManipFunc(type);
     for (i = j = 0, ref = length; 0 <= ref ? j <= ref : j >= ref; i = 0 <= ref ? ++j : --j) {
       r = imageData.data[i * 4 + 0];
       g = imageData.data[i * 4 + 1];
