@@ -35,7 +35,7 @@
       "Thursday",
       "Friday",
       "Saturday"
-    ]
+    ];
 
     var months = [
       "January",
@@ -50,7 +50,7 @@
       "October",
       "November",
       "December"
-    ]
+    ];
 
     var now = new Date(Date.now());
 
@@ -75,7 +75,7 @@
 
     var dateString = days[day] + ", " + date + " " + months[month] + " " + parseInt(1900 + year);
     var timeString = hours + ":" + mins + ":" + secs + ":" + ms;
-    
+
     // calc the time diff between frames, starting with the second frame
     if (lastTime > 0) {
       frameTimeDiff = now - lastTime;
@@ -112,5 +112,5 @@
     // save the data about this frame for future comparison
     lastTime = now;
     lastDiff = frameTimeDiff;
-  };
+  }
 })();
